@@ -7,8 +7,19 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="blue-bar"></div>	
+  <%= render 'layouts/navigation' %>
+  <div class="container round-container">
+    <%= render 'layouts/header' %>
+    <%= render 'layouts/left_column' %>
+    <%= render 'layouts/tabs' %>       
+		<section class="round-section">
+		  <div class="content round-section">
+			<%= yield %>
+			</div>
+    </section>
+    <%= render 'layouts/footer' %>
+    <%= debug(params) if Rails.env.development? %>
+  </div>
 </body>
 </html>

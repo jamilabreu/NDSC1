@@ -1,4 +1,12 @@
 NDSC::Application.routes.draw do
+  root :to => "pages#index"
+  get "/about", :to => "pages#about"
+  get "/host", :to => "pages#host"
+  get "/agenda", :to => "pages#agenda"
+  get "/contact", :to => "pages#contact"
+  get "/housing", :to => "pages#housing"
+  get "/media", :to => "pages#media"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

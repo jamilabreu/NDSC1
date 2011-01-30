@@ -1,0 +1,15 @@
+<div class="tabs round-tab">
+  <ul>
+    <% if at(:index) || at(:agenda) || at(:housing) || at(:contact) %>
+    <li <%= at(:index) %>><%= link_to "welcome", root_path %></li>
+    <li <%= at(:agenda) %>><%= link_to "agenda", agenda_path %></li>
+    <li <%= at(:housing) %>><%= link_to "housing", housing_path %></li>
+    <li <%= at(:contact) %>><%= link_to "contact", contact_path %></li>
+    <li <%= at(:media) %>><%= link_to "photos + videos", media_path %></li>
+    <% else %>
+    <li <%= at(:about) %>><%= link_to "about", about_path %></li>
+    <li <%= at(:media) %>><%= link_to "photos + videos", media_path %></li>
+    <li <%= at(:host) %>><%= link_to "host", host_path %></li>
+    <% end %>
+  </ul>
+</div>
