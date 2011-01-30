@@ -2,12 +2,12 @@
   <ul>
     <li <%= at(:about)|| at(:media) %>><%= link_to "about", about_path %></li>
     <li <%= at(:host) %>><%= link_to "host", host_path %></li>
-    <li <%= at(:index) || at(:register) || at(:agenda) %>><%= link_to "2011", root_path %></li>
+    <li <%= at(:index) || at(:register) || at(:agenda) || at(:housing) || at(:contact) %>><%= link_to "2011", root_path %></li>
     <span class="float-right">
-    <li><%= link_to "2010", root_path %></li>
-    <li><%= link_to "2009", root_path %></li>
-    <li><%= link_to "2008", root_path %></li>
-    <li><%= link_to "2007", root_path %></li>
+    <li><%#= link_to "2010", root_path %></li>
+    <li><%#= link_to "2009", root_path %></li>
+    <li><%#= link_to "2008", root_path %></li>
+    <li><%#= link_to "2007", root_path %></li>
     </span>
   </ul>
 </div>

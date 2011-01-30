@@ -228,6 +228,8 @@ section {
 	line-height: 30px;
 }
 
+.content li {font-size: 13px; font-weight: bold; color: #333; margin: 5px 25px;}
+
 /* Footer */
 
 .footer {

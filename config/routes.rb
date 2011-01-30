@@ -1,4 +1,5 @@
 NDSC::Application.routes.draw do
+
   root :to => "pages#index"
   get "/about", :to => "pages#about"
   get "/host", :to => "pages#host"
