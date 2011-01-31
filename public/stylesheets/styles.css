@@ -13,7 +13,12 @@ a img {border:none;}
 
 /* custom.css */
 
-body {background: #0C2351}
+html {
+    -moz-box-shadow: 0 0 89px 20px rgba(0, 0, 0, 0.26) inset;
+	min-height: 100%;
+}
+
+body {background: #0C2351;}
 
 #blue-bar {
 	background: #071636;
@@ -128,7 +133,8 @@ body {background: #0C2351}
 	float: left;
 }
 
-.left-column img {}
+.left-column img {
+}
 
 /* Tabs */
 .tabs {
