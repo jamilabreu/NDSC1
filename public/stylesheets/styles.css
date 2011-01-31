@@ -206,9 +206,13 @@ section {
 }
 
 .content p a {
-	color: #009900;
+	color: #228B22;
 	font-weight: bold;
 	text-decoration: none;
+}
+
+.content p a:hover {
+	color: #2A52BE;
 }
 
 .content p a img {
@@ -244,7 +248,7 @@ section {
 
 .content p #agendasub {
 	font-size: 11px;
-	color: #009900;
+	color: #228B22;
 	padding: 7px 0;
 	line-height: 23px;
 }
