@@ -15,10 +15,15 @@ a img {border:none;}
 
 html {
     -moz-box-shadow: 0 0 89px 20px rgba(0, 0, 0, 0.26) inset;
+    -webkit-box-shadow: inset 0 0 89px 20px rgba(0, 0, 0, 0.26);
+    box-shadow: inset 0 0 89px 20px rgba(0, 0, 0, 0.26);
 	min-height: 100%;
 }
 
-body {background: #0C2351;}
+body {
+	background: #0C2351;
+	font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
+}
 
 #blue-bar {
 	background: #071636;
