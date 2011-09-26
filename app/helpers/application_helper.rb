@@ -1,6 +1,6 @@
 module ApplicationHelper
-  def at(page)
-    "class='active'" if params[:action] == page.to_s
+  def at(controller, page)
+    "class='active'" if params[:controller] == controller.to_s && params[:action] == page.to_s
   end
   
   def eventbrite

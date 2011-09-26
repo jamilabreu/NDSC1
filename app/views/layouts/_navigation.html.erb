@@ -1,8 +1,9 @@
 <div class="nav-bar round-nav">
   <ul>
-    <li <%= at(:about)|| at(:media) %>><%= link_to "about", about_path %></li>
-    <li <%= at(:host) %>><%= link_to "host", host_path %></li>
-    <li <%= at(:index) || at(:register) || at(:agenda) || at(:housing) || at(:contact) %>><%= link_to "2011", root_path %></li>
+    <li <%= at(:pages, :about) || at(:pages, :media) %>><%= link_to "about", about_path %></li>
+    <li <%= at(:pages, :host) %>><%= link_to "host", host_path %></li>
+    <li <%= at(:pages, :index) || at(:pages, :register) || at(:pages, :agenda) || at(:pages, :housing) || at(:pages, :contact) %>><%= link_to "2012", root_path %></li>
+		<li <%= at(:eleven, :index) || at(:eleven, :register) || at(:eleven, :agenda) || at(:eleven, :housing) || at(:eleven, :contact) %>><%= link_to "2011", :controller => "eleven", :action => "index" %></li>
     <span class="float-right">
     <li><%#= link_to "directory", root_path %></li>
     <li><%#= link_to "2009", root_path %></li>

@@ -8,6 +8,11 @@ NDSC::Application.routes.draw do
   get "/housing", :to => "pages#housing"
   get "/media", :to => "pages#media"
 
+  get "/eleven/agenda", :to => "eleven#agenda"
+  get "/eleven/housing", :to => "eleven#housing"
+  get "/eleven/contact", :to => "eleven#contact"
+  resources :eleven
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

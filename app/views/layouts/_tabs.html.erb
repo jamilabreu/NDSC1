@@ -1,15 +1,21 @@
 <div class="tabs round-tab">
   <ul>
-    <% if at(:index) || at(:agenda) || at(:housing) || at(:contact) %>
-    <li <%= at(:index) %>><%= link_to "welcome", root_path %></li>
-    <li <%= at(:agenda) %>><%= link_to "agenda", agenda_path %></li>
-    <li <%= at(:housing) %>><%= link_to "housing", housing_path %></li>
-    <li <%= at(:contact) %>><%= link_to "contact", contact_path %></li>
-    <li <%= at(:media) %>><%= link_to "photos + videos", media_path %></li>
-    <% else %>
-    <li <%= at(:about) %>><%= link_to "about", about_path %></li>
-    <li <%= at(:host) %>><%= link_to "host", host_path %></li>
-    <li <%= at(:media) %>><%= link_to "photos + videos", media_path %></li>
+    <% if at(:pages, :index) || at(:pages, :agenda) || at(:pages, :housing) || at(:pages, :contact) %>
+    <li <%= at(:pages, :index) %>><%= link_to "welcome", root_path %></li>
+    <li <%= at(:pages, :agenda) %>><%#= link_to "agenda", agenda_path %></li>
+    <li <%= at(:pages, :housing) %>><%#= link_to "housing", housing_path %></li>
+    <li <%= at(:pages, :contact) %>><%#= link_to "contact", contact_path %></li>
+    <li <%= at(:pages, :media) %>><%= link_to "photos + videos", media_path %></li>
+    <% elsif params[:action] == "about" || params[:action] == "host" || params[:action] == "media" %>
+    <li <%= at(:pages, :about) %>><%= link_to "about", about_path %></li>
+    <li <%= at(:pages, :host) %>><%= link_to "host", host_path %></li>
+    <li <%= at(:pages, :media) %>><%= link_to "photos + videos", media_path %></li>
+    <% elsif at(:eleven, :index) || at(:eleven, :agenda) || at(:eleven, :housing) || at(:eleven, :contact) %>
+    	<li <%= at(:eleven, :index) %>><%= link_to "welcome", :controller => "eleven", :action => "index" %></li>
+    	<li <%= at(:eleven, :agenda) %>><%= link_to "agenda", :controller => "eleven", :action => "agenda" %></li>
+    	<li <%= at(:eleven, :housing) %>><%= link_to "housing", :controller => "eleven", :action => "housing" %></li>
+    	<li <%= at(:eleven, :contact) %>><%= link_to "contact", :controller => "eleven", :action => "contact" %></li>
+    	<li <%= at(:eleven, :media) %>><%= link_to "photos + videos", media_path %></li>
     <% end %>
   </ul>
 </div>

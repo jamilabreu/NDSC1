@@ -1,6 +1,13 @@
 <div class="header">
-<%= link_to image_tag('/images/yale.jpg', :width => 55), root_path %>
-<span><%= link_to image_tag('/images/register.gif'), eventbrite, :target => "_blank", :border => "0", :alt => "Register" %></span>
-<h1>5th National Dominican Student Conference</h1>
-<h2>Yale University - April 8-10, 2011</h2>
+	<% if params[:controller] == "pages" %>	
+		<%= link_to image_tag('/images/brown.png', :height => 61, :style => "padding: 0 10px"), root_path %>
+		<span><%#= link_to image_tag('/images/register.gif'), eventbrite, :target => "_blank", :border => "0", :alt => "Register" %></span>
+		<h1>6th National Dominican Student Conference</h1>
+		<h2>Brown University - April 2012</h2>
+	<% elsif params[:controller] == "eleven" %>
+		<%= link_to image_tag('/images/yale.jpg', :width => 55), root_path %>
+		<span><%= link_to image_tag('/images/register.gif'), eventbrite, :target => "_blank", :border => "0", :alt => "Register" %></span>
+		<h1>5th National Dominican Student Conference</h1>
+		<h2>Yale University - April 8-10, 2011</h2>
+	<% end %>
 </div>
