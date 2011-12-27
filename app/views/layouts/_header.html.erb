@@ -1,7 +1,7 @@
 <div class="header">
 	<% if params[:controller] == "pages" %>	
 		<%= link_to image_tag('/images/brown.png', :height => 61, :style => "padding: 0 10px"), root_path %>
-		<span><%#= link_to image_tag('/images/register.gif'), eventbrite, :target => "_blank", :border => "0", :alt => "Register" %></span>
+		<span><%= link_to image_tag('/images/register.gif'), brown_signup_url, :target => "_blank", :border => "0", :alt => "Register" %></span>
 		<h1>6th National Dominican Student Conference</h1>
 		<h2>Brown University - April 2012</h2>
 	<% elsif params[:controller] == "eleven" %>
