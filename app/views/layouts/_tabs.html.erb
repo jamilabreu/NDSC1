@@ -2,7 +2,7 @@
   <ul>
     <% if at(:pages, :index) || at(:pages, :agenda) || at(:pages, :housing) || at(:pages, :contact) %>
     <li <%= at(:pages, :index) %>><%= link_to "welcome", root_path %></li>
-    <li <%= at(:pages, :agenda) %>><%#= link_to "agenda", agenda_path %></li>
+    <li <%= at(:pages, :agenda) %>><%= link_to "agenda", agenda_path %></li>
     <li <%= at(:pages, :housing) %>><%#= link_to "housing", housing_path %></li>
     <li <%= at(:pages, :contact) %>><%#= link_to "contact", contact_path %></li>
     <li <%= at(:pages, :media) %>><%= link_to "photos + videos", media_path %></li>
